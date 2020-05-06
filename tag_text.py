@@ -1,7 +1,7 @@
 from flask import Flask, request, render_template
 import nltk
 
-# nltk.download('popular')
+nltk.download('popular')
 
 app = Flask(__name__)
 
