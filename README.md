@@ -1,4 +1,4 @@
-# POS_Tagger
+# Part-of-Speech Tagger
 
 https://part-of-speech-tagger.herokuapp.com/
 
