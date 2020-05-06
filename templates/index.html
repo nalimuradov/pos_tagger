@@ -1,55 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <link rel="shorcut icon" href="pencil.png">
     <meta charset="UTF-8">
     <title>Part-of-Speech Tagger</title>
     <style>
-        html, body {
-          width:100%;height:100%;
-          display:flex;
-          justify-content:center;
-          align-items:center;
-          overflow:hidden;
-          background:#3e4444;
-          font-family:'Montserrat Alternates'
-        }
+        @import url(https://fonts.googleapis.com/css?family=Open+Sans:300,700,300italic);
+            *, *:before, *:after { box-sizing: border-box; }
+            html { font-size: 100%;  }
+            body {
+              font-family: 'Open Sans', sans-serif;
+              font-size: 16px;
+              background: #d0e6ef;
+              color: #666;
+            }
 
-        textarea {
-          padding:10px;
-          margin: 0 auto 10px;
-          border:none ;font-size:20px;
-          font-family:'Montserrat Alternates';
-          border-radius:10px;outline:none;
-          transition: box-shadow .3s ease
-        }
+            .wrapper {
+              max-width: 75%;
+              margin: auto;
+            }
 
-        textarea::-webkit-input-placeholder {color: #3e4444}
-        textarea:focus, textarea:hover {box-shadow:0px 0px 15px 0px #82b74b}
 
-        .example_c {
-        color: #494949 !important;
-        font-family:'Montserrat Alternates';
-        text-decoration: none;
-        background: #ffffff;
-        padding: 20px;
-        display: inline-block;
-        transition: all 0.4s ease 0s;
-        }
+            h1 {
+              color: #555;
+              margin: 3rem 0 1rem 0;
+              padding: 0;
+              font-size: 1.5rem;
+            }
 
-        .example_c:hover {
-        color: #ffffff !important;
-        background: #82b74b;
-        border-color: #82b74b !important;
-        transition: all 0.4s ease 0s;
-        }
+            textarea {
+              width: 100%;
+              min-height: 200px;
+              resize: none;
+              border-radius: 8px;
+              border: 1px solid #ddd;
+              padding: 0.5rem;
+              color: #666;
+              box-shadow: inset 0 0 0.25rem #ddd;
+              &:focus {
+                outline: none;
+                border: 1px solid darken(#ddd, 5%);
+                box-shadow: inset 0 0 0.5rem darken(#ddd, 5%);
+              }
+            }
+
+            #tag_btn {
+               font-family: 'Open Sans', sans-serif;
+               font-size: 20px;
+            }
+
+            #link {
+                margin-top: 20px;
+            }
+
     </style>
 </head>
 <body>
-    <textarea id="field" form="formid" placeholder="Enter text..." maxlength="3000" rows="10" cols="40"></textarea>
-    <form id=formid" enctype="multipart/form-data" action="{{ url_for('display')}}"method="post">
+    <div class="wrapper">
+        <h1>Part-of-Speech Tagger</h1>
+        <form action="{{ url_for('display')}}" method="post">
+            <textarea name="my_text_area" placeholder="Type some text..." contenteditable>{{tagged}}</textarea>
+            <button type="submit" id="tag_btn" id="btn_predict" class="btn btn-primary">Tag</button>
+        </form>
+        <div id="link">
+            <a href="https://www.ling.upenn.edu/courses/Fall_2003/ling001/penn_treebank_pos.html" target="_blank">What do these tags mean?</a>
+        </div>
+    </div>
 
-        <button type="submit" id="btn_predict" class="btn btn-primary">Tag</button>
-        {{return_text}}
-    </form>
+<script>
+</script>
 </body>
 </html>
