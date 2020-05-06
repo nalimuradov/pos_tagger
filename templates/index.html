@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <link rel="shorcut icon" href="pencil.png">
+    <link rel="shorcut icon" href="/static/favicon.ico" />
     <meta charset="UTF-8">
     <title>Part-of-Speech Tagger</title>
     <style>
@@ -12,7 +12,7 @@
             body {
               font-family: 'Open Sans', sans-serif;
               font-size: 16px;
-              background: #d0e6ef;
+              background: #d0e6ea;
               color: #666;
             }
 
@@ -20,7 +20,6 @@
               max-width: 75%;
               margin: auto;
             }
-
 
             h1 {
               color: #555;
@@ -54,11 +53,15 @@
                 margin-top: 20px;
             }
 
+            #gh {
+                margin-left: 10px;
+                margin-top: 10px;
+            }
     </style>
 </head>
 <body>
     <div class="wrapper">
-        <h1>Part-of-Speech Tagger</h1>
+        <h1>Part-of-Speech Tagger<button id="gh" onclick="window.open('https://github.com/nalimuradov/POS_Tagger')"><img src="static/github.png" height="30px"></button></h1>
         <form action="{{ url_for('display')}}" method="post">
             <textarea name="my_text_area" placeholder="Type some text..." contenteditable>{{tagged}}</textarea>
             <button type="submit" id="tag_btn" id="btn_predict" class="btn btn-primary">Tag</button>
