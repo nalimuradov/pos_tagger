@@ -61,7 +61,7 @@
 </head>
 <body>
     <div class="wrapper">
-        <h1>Part-of-Speech Tagger<button id="gh" onclick="window.open('https://github.com/nalimuradov/POS_Tagger')"><img src="static/github.png" height="30px"></button></h1>
+        <h1>Part-of-Speech Tagger<button id="gh" onclick="window.open('https://github.com/nalimuradov/POS_Tagger')"><img src="static/gh.png" height="25px"></button></h1>
         <form action="{{ url_for('display')}}" method="post">
             <textarea name="my_text_area" placeholder="Type some text..." contenteditable>{{tagged}}</textarea>
             <button type="submit" id="tag_btn" id="btn_predict" class="btn btn-primary">Tag</button>
