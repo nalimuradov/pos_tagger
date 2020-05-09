@@ -2,8 +2,6 @@ from flask import Flask, request, render_template
 import nltk
 from gensim.models import Word2Vec
 
-nltk.download('popular')
-
 app = Flask(__name__)
 
 
