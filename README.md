@@ -1,6 +1,6 @@
 # Part-of-Speech Tagger
 
-https://part-of-speech-tagger.herokuapp.com/
+Try it at: https://part-of-speech-tagger.herokuapp.com/
 
 Can take up to a few seconds to load. Built using Python, Flask, and NLTK.
 
