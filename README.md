@@ -1,6 +1,6 @@
 # Part-of-Speech Tagger
 
-Try it at: https://part-of-speech-tagger.herokuapp.com/
+Try it at: https://tagger.nalimuradov.com
 
 Built using Python, Flask, and NLTK.
 
