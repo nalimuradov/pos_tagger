@@ -1,5 +1,7 @@
 # Part-of-Speech Tagger
 
+**Can take a few seconds to initially load.**
+
 Try it at: https://tagger.nalimuradov.com
 
 Built using Python, Flask, and NLTK.
